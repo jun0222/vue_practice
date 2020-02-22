@@ -8,6 +8,7 @@
 <body>
 
 	<div id="app">
+		<a :[attribute]="url">google</a>
 	</div>
 
 </body>
@@ -17,15 +18,8 @@
 var app = new Vue({
 	el: '#app',
 	data: {
-		message: 'Hello Vue!',
-		number: 3,
-		ok: true
-	},
-	methods: {
-		sayHi: function() {
-			this.message = 'Hello VueJS'
-			return 'Hi'
-		}
+		url: 'https://google.com',
+		attribute: 'href'
 	}
 })
 </script>
