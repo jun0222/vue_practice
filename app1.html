@@ -8,9 +8,12 @@
 <body>
 
 	<div id="app">
-		{{ message }}
+		<p>{{ message }}</p>
+		<p>{{ number + 5 }}</p>
+		<p>{{ ok ? 'YES' : 'NO' }}</p>
+		<p>{{ sayHi() }}</p>
 	</div>
-        
+
 </body>
 </html>
 
@@ -18,7 +21,14 @@
 var app = new Vue({
 	el: '#app',
 	data: {
-		message: 'Hello Vue!'
+		message: 'Hello Vue!',
+		number: 3,
+		ok: true
+	},
+	methods: {
+		sayHi: function() {
+			return 'Hi';
+		}
 	}
 })
 </script>
