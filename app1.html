@@ -8,10 +8,6 @@
 <body>
 
 	<div id="app">
-		<p>{{ message }}</p>
-		<p>{{ number + 5 }}</p>
-		<p>{{ ok ? 'YES' : 'NO' }}</p>
-		<p>{{ sayHi() }}</p>
 	</div>
 
 </body>
@@ -27,7 +23,8 @@ var app = new Vue({
 	},
 	methods: {
 		sayHi: function() {
-			return 'Hi';
+			this.message = 'Hello VueJS'
+			return 'Hi'
 		}
 	}
 })
