@@ -8,7 +8,8 @@
 <body>
 
 	<div id="app">
-		<a v-bind="twitterObject">ツイッター</a>
+		<p>現在{{ number }}回クリックされています</p>
+		<button v-on:click="countUp">カウントアップ</button>
 	</div>
 
 </body>
@@ -18,11 +19,11 @@
 var app = new Vue({
 	el: '#app',
 	data: {
-		url: 'https://google.com',
-		attribute: 'href',
-		twitterObject: {
-			href: 'https://twitter.com',
-			id: 31
+		number: 0
+	},
+	methods: {
+		countUp: function() {
+			this.number += 1
 		}
 	}
 })
